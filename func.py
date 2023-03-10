@@ -3,6 +3,6 @@ def add(a,b):
 
 
 
-a=int(input("enter first no"))
-b=int(input("enter second no"))
+a=10
+b=15
 c=print(add(a,b))
