@@ -12,8 +12,8 @@ on:
           required: true
 
 env:
-  a:${{github.event.inputs.int1}}
-  b:${{github.event.inputs.int1}}
+  a: ${{github.event.inputs.int1}}
+  b: ${{github.event.inputs.int1}}
 
 jobs:
   job1:
