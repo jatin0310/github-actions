@@ -13,7 +13,7 @@ on:
 
 env:
   a: ${{github.event.inputs.int1}}
-  b: ${{github.event.inputs.int1}}
+  b: ${{github.event.inputs.int2}}
 
 jobs:
   job1:
