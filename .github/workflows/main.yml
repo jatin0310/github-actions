@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ "main" ]
 
-  workflow_dispatch:  
+  workflow_dispatch:
 
 
 jobs:
@@ -21,25 +21,25 @@ jobs:
           python-version: '3.10' 
       - run:  |
           cd pythonfile
-          python func.py
+          python func.py 10 25
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, ubuntu!
   
-  job2:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v3
+  # job2:
+  #   runs-on: windows-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
 
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.10' 
-      - run: |
-          cd pythonfile
-          python func.py
+  #     - uses: actions/setup-python@v4
+  #       with:
+  #         python-version: '3.10' 
+  #     - run: |
+  #         cd pythonfile
+  #         python func.py 
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, window!
+      # - name: Run a one-line script
+      #   run: echo Hello, window!
     
