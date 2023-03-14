@@ -1,13 +1,15 @@
 name : jatin-git-action
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
-  workflow_dispatch:
-
+ workflow_dispatch:
+      inputs:
+        int1:
+          description: 'Enter first no'     
+          required: true
+    
+        int2:
+          description: 'Enter second no'     
+          required: true
 
 jobs:
   job1:
@@ -21,7 +23,7 @@ jobs:
           python-version: '3.10' 
       - run:  |
           cd pythonfile
-          python func.py 10 25
+          python func.py $int1 $int2
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
